@@ -24,5 +24,7 @@ I affirm that I have adhered to the Honor Code in this assignment.
 17. sed -E 's/(RobertotText )?Hoyle)/Robert/g' 
 18. sed -E 's/([A-Z])[a-z]+ ([A-Z])[a-z]+/\1\2/g' testText
 19. sed -E 's/([0-9]{3})([0-9]{3})([0-9]{4})/(\1\) \2-\3/g'
-20. 
+20. wget --quiet -O- http://xkcd.com/ | sed -E -n 's/.*<img src="\/\/(.*)" title="(.*)" alt.*/\nImage: http:\1\nTitle: \2/gp' | sed -E 's/\&#39;/'/gp' ##This is wrong but it's pretty close
+
+
 
